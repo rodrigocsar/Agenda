@@ -1,0 +1,60 @@
+<%- include('includes/head') %>
+<%- include('includes/nav') %>
+
+   <div class="">
+    <div class="row ">
+        <div class="col-lg-2"></div>
+
+        <div class="col-lg-8 my-3">
+             <h1 class=" text-center">Register and Login</h1>
+          
+              <%- include('includes/messages.ejs'); %>
+
+    <div class="row my-5">
+        <div class="col-lg">
+            <h4>Register</h4>
+            <p>Create account</p>
+
+            <form class="form-register" action="/login/register" method="POST">
+                                    <input type="hidden" name="_csrf" value=<%= csrfToken %>>
+
+  <div class="form-group my-3">
+    <label >Email address</label>
+    <input type="email" class="form-control" name="email">
+  </div>
+   <div class="form-group">
+    <label >Password</label>
+    <input type="password" class="form-control" name="password">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Create</button>
+</form>
+        </div>
+
+
+
+        <div class="col-lg">
+            <h4>Sing Up</h4>
+            <p>Log in with yout accout</p>
+
+                  <form class="form-login" action="/login/login" method="POST">
+                    <input type="hidden" name="_csrf" value=<%= csrfToken %>>
+  <div class="form-group my-3">
+    <label >Email address</label>
+    <input type="email" class="form-control" name="email">
+  </div>
+   <div class="form-group">
+    <label >Password</label>
+    <input type="password" class="form-control" name="password">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Sing Up</button>
+</form>
+
+        </div>
+    </div>
+        </div>
+       
+    </div>
+   </div>
+<%- include('includes/footer') %>
