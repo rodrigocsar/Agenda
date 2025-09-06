@@ -21,4 +21,4 @@ Este projeto utiliza uma conexão com o banco de dados MongoDB Atlas. Para garan
 Antes de iniciar o projeto, você deve criar um arquivo chamado `.env` na raiz do projeto e adicionar a seguinte variável:
 
 ```env
-CONNECTIONSTRING=mongodb+srv: Sua CONNETSTRING
+CONNECTIONSTRING=mongodb+srv: //Sua CONNETSTRING
